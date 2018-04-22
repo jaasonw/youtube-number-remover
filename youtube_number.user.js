@@ -1,3 +1,13 @@
+// ==UserScript==
+// @name         youtube notification number remover
+// @namespace    youtubenotif
+// @version      1.0
+// @description  removes the number in "(5) video title"
+// @author       jasonw
+// @match        https://www.youtube.com/*
+// @grant        none
+// ==/UserScript==
+
 function fixTitle(title) {
     return title.replace(/ *\([^)]*\) */g, "");
 }
