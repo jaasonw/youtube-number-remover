@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 function fixTitle(title) {
-    return title.replace(/ *\([^)]*\) */g, "");
+    return title.replace(/ *\([^)]*\) */, "");
 }
 window.addEventListener("load", () => {
     document.title = fixTitle(document.title);
