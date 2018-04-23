@@ -12,7 +12,7 @@ function fixTitle(title) {
     // lazy and shitty way to make sure we dont trim trailing () cus i suck at regex
     // ex: song title (feat. artist)
     // bugs if a video title has () at the beginning ¯\_(ツ)_/¯
-    return title.substr(0, 4).replace(/ *\([^)]*\) */, "");
+    return title.substr(0, 4).replace(/ *\([^)]*\) */, "") + title.substr(4);
 }
 window.addEventListener("load", () => {
     document.title = fixTitle(document.title);
