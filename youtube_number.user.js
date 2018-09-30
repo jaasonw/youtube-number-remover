@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         youtube notification number remover
 // @namespace    youtubenotif
-// @version      1.1
+// @version      1.2
 // @description  removes the number in "(5) video title"
 // @author       jasonw
 // @match        https://www.youtube.com/*
