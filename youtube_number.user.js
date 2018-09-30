@@ -17,6 +17,11 @@ function fixTitle(title) {
     return title.substr(0, WIDTH).replace(/ *\([^)]*\) */, "") + title.substr(WIDTH);
 }
 window.addEventListener("load", () => {
+    // does not work on firefox lookin ass >:(
+    // cheap setInterval fix because i cant be bothered to figure out why it works on one
+    // browser but not another
+    window.setInterval(() => { document.title = fixTitle(document.title) }, 1000);
+    
     document.title = fixTitle(document.title);
 
     let observer = new MutationObserver(() => {
