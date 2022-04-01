@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         youtube notification number remover
 // @namespace    youtubenotif
-// @version      1.4
+// @version      1.5
 // @description  removes the number in "(5) video title"
 // @author       jasonw
 // @match        https://www.youtube.com/*
 // @grant        none
 // ==/UserScript==
 function fixTitle(title) {
-    return title.replace(/^(\(\d*\))\W*/, "");
+    return title.replace(/^(\(\d*\))\s*/, "");
 }
 
 document.title = fixTitle(document.title);
